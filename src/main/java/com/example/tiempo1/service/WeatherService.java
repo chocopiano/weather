@@ -17,11 +17,6 @@ public class WeatherService {
         return repository.save(weather);
     }
 
-    public List<Weather> saveWeathers(List<Weather> weathers) {
-        List<Weather> lista = repository.saveAll(weathers);
-        return lista;
-    }
-
     public List<Weather> getWeathers() {
         return repository.findAll();
     }
@@ -31,10 +26,6 @@ public class WeatherService {
         LocalDate localDate = LocalDate.now();
         String date = dtf.format(localDate);
         return repository.findByLatGreaterThanEqualAndLatLessThanEqualAndLongitudGreaterThanEqualAndLongitudLessThanEqualAndDate(lat1, lat2, longitud1, longitud2, date);
-    }
-
-    public Weather getWeatherById(int id) {
-        return repository.findById(id).orElse(null);
     }
 
     public Weather getWeatherByName(String name) {
