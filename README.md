@@ -1,4 +1,4 @@
-Para correr el archivo, usar: ./gradlew bootRun 
+Para correr el archivo, usar: './gradlew bootRun'
 Lo anterior correra en http://localhost:8080
 
 Base de datos:
